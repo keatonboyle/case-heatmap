@@ -8,6 +8,11 @@ const compiler = webpack(config);
 
 app.use('/templates', express.static('src'));
 
+// TODO: currently, the API for getting case text and citations is
+// simply retrieving a file.  Consider adding preprocessing or
+// extracting this into a custom handler for flexibility later.
+app.use('/assets/cases', express.static('assets/cases'));
+
 app.use(webpackDevMiddleware(compiler, {
   publicPath: config.output.publicPath,
 }));
