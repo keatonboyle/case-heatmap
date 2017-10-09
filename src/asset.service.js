@@ -14,7 +14,9 @@ export default class AssetService {
   // TODO: add cache support, URL sanitization on slug, error handling.
   getCase(slug) {
     return this.$http.get(`${CASES_PATH}/${slug}/${TEXT_FILENAME}`).then(
-      (response) => this.$sce.getTrustedHtml(response.data),
+      // TODO: trusting this as HTML might be unwise, but do it for now
+      // to preserve the data-page attribute.
+      (response) => this.$sce.trustAsHtml(response.data),
       (error) => {
         console.error(error);
       });

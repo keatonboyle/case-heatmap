@@ -1,6 +1,7 @@
 const express = require('express');
 const webpack = require('webpack');
 const webpackDevMiddleware = require('webpack-dev-middleware');
+const historyApiFallback = require('connect-history-api-fallback');
 
 const app = express();
 const config = require('./webpack.config.js');
@@ -12,6 +13,8 @@ app.use('/templates', express.static('src'));
 // simply retrieving a file.  Consider adding preprocessing or
 // extracting this into a custom handler for flexibility later.
 app.use('/assets/cases', express.static('assets/cases'));
+
+app.use(historyApiFallback());
 
 app.use(webpackDevMiddleware(compiler, {
   publicPath: config.output.publicPath,

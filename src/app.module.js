@@ -1,11 +1,10 @@
 import './style.css';
 import angular from 'angular';
 import ngRoute from 'angular-route';
-import ngSanitize from 'angular-sanitize';
 import AssetService from './asset.service.js';
 import CasePageCtrl from './case-page.ctrl.js';
 
-const app = angular.module('caseHeatmap', [ngRoute, ngSanitize])
+const app = angular.module('caseHeatmap', [ngRoute])
   .service('assetService', AssetService)
   .config(function($routeProvider, $locationProvider) {
     $routeProvider
