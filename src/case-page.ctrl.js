@@ -19,7 +19,10 @@ export default class CasePageCtrl {
 
   scrollToPage(page) {
     // TODO ease animation, account for body offset
-    const target = $(`[data-page="${page}"]`)[0].offsetTop;
+    const target = $(`[data-page="${page}"]`)[0];
+
+    // Default to 0 for pages that aren't found (like 0 and 1).
+    const scrollTo = target ? target.offsetTop : 0;
     $('html, body').animate({
       'scrollTop': target,
     });
