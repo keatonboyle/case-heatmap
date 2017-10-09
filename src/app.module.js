@@ -1,6 +1,7 @@
 import './style.css';
 import angular from 'angular';
 import ngRoute from 'angular-route';
+import $ from 'jquery';
 import AssetService from './asset.service.js';
 import CasePageCtrl from './case-page.ctrl.js';
 import CitationHeatmapComponent from './citation-heatmap.component.js';

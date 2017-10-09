@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 export default class CasePageCtrl {
   constructor(assetService, $routeParams) {
     this.assetService = assetService;
@@ -16,6 +18,10 @@ export default class CasePageCtrl {
   }
 
   scrollToPage(page) {
-    console.log(page);
+    // TODO ease animation, account for body offset
+    const target = $(`[data-page="${page}"]`)[0].offsetTop;
+    $('html, body').animate({
+      'scrollTop': target,
+    });
   }
 }
