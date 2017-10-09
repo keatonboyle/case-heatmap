@@ -1,3 +1,9 @@
 <div class="case-page">
-  <div ng-bind-html="$ctrl.caseText"></div>
+  <div class="case-page-heatmap">
+    <citation-heatmap citations="$ctrl.citationsMap" on-page-select="$ctrl.scrollToPage(page);">
+    </citation-heatmap>
+  </div>
+  <div class="case-page-case">
+    <div ng-bind-html="$ctrl.caseText"></div>
+  </div>
 </div>

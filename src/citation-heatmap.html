@@ -1,0 +1,5 @@
+<div ng-repeat="(page, count) in $ctrl.citations">
+  <a ng-click="$ctrl.onPageSelect({page: page});">
+    {{page}}: {{count}}
+  </a>
+</div>

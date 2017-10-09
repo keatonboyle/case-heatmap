@@ -14,4 +14,8 @@ export default class CasePageCtrl {
         this.citationsMap = citationsMap;
       });
   }
+
+  scrollToPage(page) {
+    console.log(page);
+  }
 }

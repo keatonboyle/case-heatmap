@@ -1,1 +1,13 @@
-.foo {}
+.case-page {
+  position: relative;
+}
+
+.case-page-heatmap {
+  position: fixed;
+  width: 100px;
+}
+
+.case-page-case {
+  padding-left: 100px;
+  margin-left: 20px;
+}
