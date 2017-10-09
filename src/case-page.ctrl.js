@@ -24,7 +24,7 @@ export default class CasePageCtrl {
     // Default to 0 for pages that aren't found (like 0 and 1).
     const scrollTo = target ? target.offsetTop : 0;
     $('html, body').animate({
-      'scrollTop': target,
+      'scrollTop': scrollTo,
     });
   }
 }
