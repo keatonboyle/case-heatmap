@@ -12,13 +12,18 @@
   margin-left: 20px;
 }
 
-.citation-heatmap__blip {
-  background: #000;
+.citation-heatmap-blip {
   cursor: pointer;
   height: 3px;
   overflow: hidden;
 }
 
-.citation-heatmap__blip:hover {
+.citation-heatmap-blip:hover {
   outline: 1px solid red;
+}
+
+.citation-heatmap-blip__fill {
+  background: #000;
+  height: 100%;
+  width: 100%;
 }

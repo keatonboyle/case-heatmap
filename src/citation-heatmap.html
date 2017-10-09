@@ -1,2 +1,3 @@
-<div class="citation-heatmap__blip" ng-repeat="heat in $ctrl.citations.asHeatArray track by $index" ng-style="{'opacity': heat}" ng-click="$ctrl.onPageSelect({page: $index});">
+<div class="citation-heatmap-blip" ng-repeat="heat in $ctrl.citations.asHeatArray track by $index" ng-click="$ctrl.onPageSelect({page: $index});">
+  <div class="citation-heatmap-blip__fill" ng-style="{'opacity': heat}"></div>
 </div>
