@@ -1,3 +1,5 @@
+import CitationStats from './citation-stats.js';
+
 const CASES_PATH = '/assets/cases';
 const TEXT_FILENAME = 'text.html';
 const CITATIONS_FILENAME = 'citations.json';
@@ -30,7 +32,7 @@ export default class AssetService {
   // TODO: add cache support, URL sanitization on slug, error handling.
   getCitations(slug) {
     return this.$http.get(`${CASES_PATH}/${slug}/${CITATIONS_FILENAME}`).then(
-      (response) => response.data,
+      (response) => new CitationStats(response.data),
       (error) => {
         console.error(error);
       });
