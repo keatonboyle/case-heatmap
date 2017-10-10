@@ -7,11 +7,11 @@
       ng-style="{'height': 100/$ctrl.citations.pages + '%', 'width':  $ctrl.heat(citationCount)*100 + '%'}"
       ng-repeat="citationCount in $ctrl.citations.asArray track by $index"
       ng-click="$ctrl.onPageSelect({page: $index + 1});">
-    <div class="citation-heatmap-blip__fill"
+    <div class="citation-heatmap-blip-fill"
         ng-style="{'opacity': $ctrl.heat(citationCount)}">
     </div>
-    <div class="citation-heatmap-blip-tooltip__positioner">
-      <div class="citation-heatmap-blip-tooltip__text">
+    <div class="citation-heatmap-blip-tooltip-positioner">
+      <div class="citation-heatmap-blip-tooltip-text">
         pg. {{$index + 1}}: {{citationCount}}
       </div>
     </div>

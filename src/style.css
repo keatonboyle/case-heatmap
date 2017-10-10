@@ -92,23 +92,23 @@ html,
   box-shadow: 0 0 5px 5px white;
 }
 
-.citation-heatmap-blip__fill {
+.citation-heatmap-blip-fill {
   background: #000;
   height: 100%;
 }
 
-.citation-heatmap-blip-tooltip__positioner {
+.citation-heatmap-blip-tooltip-positioner {
   display: none;
   position: absolute;
   left: 108px;
   top: 50%;
 }
 
-.citation-heatmap-blip:hover .citation-heatmap-blip-tooltip__positioner {
+.citation-heatmap-blip:hover .citation-heatmap-blip-tooltip-positioner {
   display: block;
 }
 
-.citation-heatmap-blip-tooltip__text {
+.citation-heatmap-blip-tooltip-text {
   background-color: #222;
   border-radius: 3px;
   color: #f0f0f0;
