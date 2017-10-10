@@ -1,4 +1,4 @@
-import './style.css';
+import './global-styles.css';
 import angular from 'angular';
 import ngRoute from 'angular-route';
 import $ from 'jquery';

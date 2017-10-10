@@ -1,0 +1,64 @@
+.case-page {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: stretch;
+  flex-direction: row;
+}
+
+.case-page-heatmap {
+  box-sizing: border-box;
+  height: 100%;
+  min-width: 96px;
+  padding: 24px 0;
+  width: 96px;
+  z-index: 1;
+}
+
+.case-page-case {
+  flex: 1;
+  box-sizing: border-box;
+  height: 100%;
+  overflow-y: scroll;
+  padding: 24px;
+}
+
+.case-page-case-text {
+  background-color: #fff;
+  box-shadow: 0 2px 4px #333;
+  margin-right: 72px;
+  padding: 36px;
+  position: relative;
+}
+
+.case-page-case-text .page_number_margin {
+  color: black;
+  pointer-events: none;
+  position: absolute;
+  right: -60px;
+}
+
+.case-page-case-text .note-container .page_number_margin,
+.case-page-case-text .page_number {
+  /*
+   * Hide margin page numbers that would occur in notes and page numbers in the
+   * middle of text.
+   */
+  display: none;
+}
+
+.case-page-case-text .note-container {
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+.case-page-case-text a,
+.case-page-case-text a:visited {
+  color: #6e6e6e;
+}
+
+.case-page-case-text .caption:first-child {
+  -webkit-margin-before: 0;
+}

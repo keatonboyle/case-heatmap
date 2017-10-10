@@ -1,3 +1,4 @@
+import './case-page.css';
 import $ from 'jquery';
 
 export default class CasePageCtrl {

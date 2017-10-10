@@ -1,3 +1,5 @@
+import './citation-heatmap.css';
+
 class CitationHeatmapCtrl {
   constructor() {
     this.citations;
