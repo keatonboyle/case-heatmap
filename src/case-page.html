@@ -9,5 +9,9 @@
         ng-if="$ctrl.caseText"
         ng-bind-html="$ctrl.caseText">
     </div>
+    <div class="case-page-case-text"
+        ng-if="$ctrl.error">
+      <p>Ah, we don't have that one. Perhaps you're interested in <a href="case/buckley-v-valeo">this particular case</a>?</p>
+    </div>
   </div>
 </div>
