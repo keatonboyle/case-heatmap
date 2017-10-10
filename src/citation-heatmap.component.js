@@ -3,8 +3,13 @@ class CitationHeatmapCtrl {
     this.citations;
   }
 
+  // Calculates a 'heat' score to use for sizing and coloring the heatmap blip
+  // for a page with the given citationCount
+  //
+  // citationCount: number
+  // returns: number
   heat(citationCount) {
-    // TODO use a more interesting heat function than a linear one.
+    // TODO use a more interesting heat function than this linear one.
     return 0.1 + (citationCount / this.citations.maxCitations) * 0.9;
   }
 }

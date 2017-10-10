@@ -9,7 +9,6 @@ export default class CasePageCtrl {
     this.caseText;
     this.assetService.getCase($routeParams.slug).then(
       (html) => {
-        // TODO handle internal links.
         this.caseText = html;
       },
       (error) => {
@@ -27,8 +26,12 @@ export default class CasePageCtrl {
       });
   }
 
+  // Scrolls the text of the case to approximately the beginning of a given
+  // page.
+  //
+  // page: number
   scrollToPage(page) {
-    // TODO ease animation, account for body offset.
+    // TODO: ease animation, account for body offset.
     const target = $(`.page_number_margin[data-page="${page}"]`)[0];
 
     // Default to 0 for pages that aren't found (like 0 and 1).

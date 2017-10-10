@@ -1,4 +1,8 @@
 <div class="citation-heatmap">
+  <!-- TODO: this is a pretty long ng-repeat with a good number of watches
+    inside of it.  It will not play well with longer documents.  Consider
+    refactoring to build this structure manually (without angular), or even
+    serverside. -->
   <div class="citation-heatmap-blip"
       ng-style="{'height': 100/$ctrl.citations.pages + '%', 'width':  $ctrl.heat(citationCount)*100 + '%'}"
       ng-repeat="citationCount in $ctrl.citations.asArray track by $index"

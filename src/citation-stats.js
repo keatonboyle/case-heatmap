@@ -12,7 +12,7 @@ export default class CitationsStats {
     // asArray is a list of citation counts per page.  Note that page 1 is at
     // index 0 in the array.
     //
-    // TODO account for uncited pages at the end.
+    // TODO: account for uncited pages at the end.
     this.asArray = Array.from(
       new Array(this.pages),
       (v, i) => {

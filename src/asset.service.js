@@ -10,8 +10,8 @@ export default class AssetService {
     this.$sce = $sce;
   }
 
-  // slug: string identifying a case
-  // returns: promise of an HTML string containing the text of a case
+  // slug: string. String identifying a case
+  // returns: Promise<TrustedString>
   //
   // TODO: add cache support, URL sanitization on slug, better error handling.
   getCase(slug) {
@@ -22,9 +22,9 @@ export default class AssetService {
 
   }
 
-  // slug: string identifying a case
-  // returns: promise of a JSON object mapping page numbers to citation
-  //   counts
+  // slug: string. String identifying a case
+  // returns: Promise<Object>. Promise of a JSON object mapping page numbers to
+  //   citation counts
   //
   // TODO: add cache support, URL sanitization on slug, better error handling.
   getCitations(slug) {
