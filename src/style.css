@@ -1,20 +1,61 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
 .case-page {
   position: relative;
 }
 
 .case-page-heatmap {
+  height: 100%;
   position: fixed;
-  width: 100px;
+  width: 96px;
 }
 
 .case-page-case {
-  padding-left: 100px;
-  margin-left: 20px;
+  background-color: #f0f0f0;
+  padding: 24px 24px 24px 132px;
+}
+
+.case-page-case-text {
+  background-color: #fff;
+  box-shadow: 0 2px 4px #333;
+  margin-right: 72px;
+  padding: 36px;
+  position: relative;
+}
+
+.case-page-case-text .page_number_margin {
+  color: black;
+  pointer-events: none;
+  position: absolute;
+  right: -60px;
+}
+
+
+
+
+
+
+/* Hide page numbers that would occur in notes. */
+
+.case-page-case .note-container .page_number_margin {
+  display: none;
+}
+
+.case-page-case .note-container {
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+.case-page-case .caption:first-child {
+  -webkit-margin-before: 0;
 }
 
 .citation-heatmap-blip {
   cursor: pointer;
-  height: 3px;
   overflow: hidden;
 }
 
