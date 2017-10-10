@@ -1,3 +1,10 @@
-<div class="citation-heatmap-blip" ng-style="{'height': 100/$ctrl.citations.pages + '%'}" ng-repeat="heat in $ctrl.citations.asHeatArray track by $index" ng-click="$ctrl.onPageSelect({page: $index});">
-  <div class="citation-heatmap-blip__fill" ng-style="{'opacity': 0.1 + heat*0.9, 'width':  10 + heat*90 + '%'}"></div>
+<div class="citation-heatmap">
+  <div class="citation-heatmap-blip" ng-style="{'height': 100/$ctrl.citations.pages + '%', 'width':  $ctrl.heat(citationCount)*100 + '%'}" ng-repeat="citationCount in $ctrl.citations.asArray track by $index" ng-click="$ctrl.onPageSelect({page: $index + 1});">
+    <div class="citation-heatmap-blip__fill" ng-style="{'opacity': $ctrl.heat(citationCount)}"></div>
+    <div class="citation-heatmap-blip-tooltip__positioner">
+      <div class="citation-heatmap-blip-tooltip__text">
+        pg. {{$index + 1}}: {{citationCount}}
+      </div>
+    </div>
+  </div>
 </div>

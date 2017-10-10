@@ -1,22 +1,35 @@
 body,
-html {
+html,
+[ng-view],
+.case-page {
+  background-color: #f0f0f0;
+  height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
 }
 
 .case-page {
-  position: relative;
+  display: flex;
+  align-items: stretch;
+  flex-direction: row;
 }
 
 .case-page-heatmap {
+  box-sizing: border-box;
   height: 100%;
-  position: fixed;
+  min-width: 96px;
+  padding: 24px 0;
   width: 96px;
+  z-index: 1;
 }
 
 .case-page-case {
-  background-color: #f0f0f0;
-  padding: 24px 24px 24px 132px;
+  flex: 1;
+  box-sizing: border-box;
+  height: 100%;
+  overflow-y: scroll;
+  padding: 24px;
 }
 
 .case-page-case-text {
@@ -35,10 +48,6 @@ html {
 }
 
 
-
-
-
-
 /* Hide page numbers that would occur in notes. */
 
 .case-page-case .note-container .page_number_margin {
@@ -54,17 +63,50 @@ html {
   -webkit-margin-before: 0;
 }
 
-.citation-heatmap-blip {
-  cursor: pointer;
-  overflow: hidden;
+.citation-heatmap {
+  height: 100%;
 }
 
-.citation-heatmap-blip:hover {
-  outline: 1px solid red;
+.citation-heatmap-blip {
+  cursor: pointer;
+  position: relative;
+}
+
+.citation-heatmap-blip:hover:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  box-shadow: 0 0 5px 5px white;
 }
 
 .citation-heatmap-blip__fill {
   background: #000;
   height: 100%;
-  width: 100%;
+}
+
+.citation-heatmap-blip-tooltip__positioner {
+  display: none;
+  position: absolute;
+  left: 108px;
+  top: 50%;
+}
+
+.citation-heatmap-blip:hover .citation-heatmap-blip-tooltip__positioner {
+  display: block;
+}
+
+.citation-heatmap-blip-tooltip__text {
+  background-color: #222;
+  border-radius: 3px;
+  color: #f0f0f0;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 10px;
+  position: absolute;
+  top: -15px;
+  white-space: nowrap;
 }
